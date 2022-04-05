@@ -1,0 +1,49 @@
+<template>
+  <el-breadcrumb separator="/">
+    <el-breadcrumb-item v-for="(item, index) in breadcrumbList" :key="index">
+      <span class="no-redirect" v-if="index === breadcrumbList.length-1">{{
+          $t(`menus.${item.name}`)
+        }}</span>
+      <span class="redirect" v-else @click="handleRedirect(item.path)">{{ 
+          $t(`menus.${item.name}`)
+        }}</span>
+    </el-breadcrumb-item>
+  </el-breadcrumb>
+</template>
+
+<script setup>
+import { watch,ref } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+const route = useRoute()
+const router = useRouter()
+// console.log(route.matched); 路由映射表
+// 每次点击更新这个路由映射表
+// 监听变化后进行赋值操作
+const breadcrumbList = ref([])
+const initbreadcrumbList = () =>{
+  breadcrumbList.value = route.matched
+  console.log(route.matched);
+}
+const handleRedirect = (path) =>{
+  router.push(path)
+}
+watch(route, ()=>{
+  initbreadcrumbList()
+},
+{deep:true, immediate:true})
+</script>
+
+<style lang="scss" scoped>
+.no-redirect {
+  color: #97a8be;
+  cursor: text;
+}
+.redirect {
+  color: #666;
+  font-weight: 600;
+  cursor: pointer;
+  &:hover {
+    color: $menuBg;
+  }
+}
+</style>
