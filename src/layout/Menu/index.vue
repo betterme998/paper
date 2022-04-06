@@ -14,7 +14,7 @@
             <el-icon>
               <component :is="iconList[index]"></component>
             </el-icon>
-            <span>{{item.authName}}</span>
+            <span>{{$t(`menusroot.${item.path}`)}}</span>
           </template>
           <el-menu-item :index="'/'+it.path" 
                         v-for="it in item.children" 
@@ -43,7 +43,7 @@ const defaultActive = ref(sessionStorage.getItem('path') || '/users')
 const menulist = ref([])
 const initMenusLint = async() => {
  menulist.value = await menuList()
-
+ console.log(menulist.value);
 }
 initMenusLint()
 

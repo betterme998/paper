@@ -11,6 +11,13 @@ export default {
     orders: 'order list',
     reports: 'data report'
   },
+  menusroot: {
+    users: 'USER',
+    rights: 'AUTHORITY',
+    goods: 'COMMODITY',
+    orders: 'ORDER',
+    reports: 'DATA'
+  },
   login: {
     title: 'user login',
     btnTitle: 'login'

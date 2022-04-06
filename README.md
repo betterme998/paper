@@ -166,3 +166,41 @@ permission.js文件中判断state中是否有token，存在的话，判断它去
 1.创建screenfull.vue文件
 2.在headers中引入后 点击全屏按钮 全屏
 
+### 引导页_bilibili
+引导页使用的是drivers  在GitHub上找  安装npm install driver.js
+1.headers -> components下新建文件夹deiver，并创建index.vue
+2.使用 并引入 import Driver from 'driver.js'; import 'driver.js/dist/driver.min.css';  GitHub上有步骤用它
+
+把图标处理好后 跟着deiver配置好 点击启动引导
+
+### 表格静态页面
+1.实现表格头部搜索区域 用element
+2.完成表单。用element后获取数据，在api创建一个uesr.js 获取数据，带参数
+2.把数据绑定给element 表单。 
+3.按钮的实现，element 给按钮加上 #default数据就会出现
+4.用i18n 该标签语言
+
+### 全局属性
+1.把创建事件改成年月日的形式
+要用到vue的全局属性 我们在utils文件中定义的filter.js文件 中处理的值 可通过全局属性使用
+
+### 分页器 搜索
+我们以及绑定了v-model 只要点击时改变获取数据的方法
+
+### 修改用户状态
+
+### 添加用户
+用到Dialog 对话框 设置对话框的取消 确定按钮
+之后再里面嵌套表单
+用表单校验
+发起请求进行添加用户的操作
+在数据请求user.js中发起请求
+添加后再次添加会有之前信息
+
+### 编辑用户
+完善添加用户功能 1.统一校验 2.提交一个之后，触发事件刷新数据
+1.统一校验用 element： 
+2.编辑用户需要把拿行数据传过去
+
+### 删除用户
+1element用提示信息。2用i18n转换 3定义接口

@@ -11,6 +11,13 @@ export default {
     orders: '订单列表',
     reports: '数据报表'
   },
+  menusroot: {
+    users: '用户管理',
+    rights: '权限管理',
+    goods: '商品管理',
+    orders: '订单管理',
+    reports: '数据统计'
+  },
   login: {
     title: '用户登录',
     btnTitle: '登录'
