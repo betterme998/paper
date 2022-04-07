@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkclassification"]=self["webpackChunkclassification"]||[]).push([[136],{8136:function(n,r,i){i.r(r),i.d(r,{default:function(){return a}});var t=i(6252);function c(n,r){return(0,t.wg)(),(0,t.iD)("div",null,"reports")}var e=i(3744);const s={},u=(0,e.Z)(s,[["render",c]]);var a=u}}]);
+//# sourceMappingURL=136.ce3808fa.js.map
